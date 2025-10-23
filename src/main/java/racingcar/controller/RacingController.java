@@ -9,14 +9,14 @@ import java.util.List;
 
 public class RacingController {
 
+    private Racing racing;
 
-    public RacingController() {
-
+    public RacingController(Racing racing) {
+        this.racing = racing;
     }
 
     public void run(){
         //경기 준비
-        prepareRace();
 
         //경기 진행
 

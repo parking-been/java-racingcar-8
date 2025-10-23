@@ -9,11 +9,12 @@ import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
 import java.util.List;
+import java.util.Random;
 
 public class Application {
     public static void main(String[] args) {
         
-        //입력값 받은 후 인스턴스 생성
+        //경기 준비
         OutputView.printInputMessageOfNameOfCars();
         List<String> nameofCars =  InputView.getNameofCars();
 
@@ -22,8 +23,9 @@ public class Application {
 
         Cars cars = new Cars(nameofCars);
         Counter counter = new Counter(totalCount);
-
-
+        RacingResult racingResult = new RacingResult();
+        Racing racing = new Racing(cars, counter, racingResult);
+        RacingController racingController = new RacingController(racing);
         
         
         //RacingController racingController = new RacingController();
