@@ -8,10 +8,10 @@ import racingcar.view.OutputView;
 import java.util.List;
 
 public class RacingController {
-    private Racing racing;
 
-    public RacingController(Racing racing){
-        this.racing = racing;
+
+    public RacingController() {
+
     }
 
     public void run(){
@@ -26,11 +26,9 @@ public class RacingController {
 
     /**
      * 경기 준비
+     * Racing을 위한 준비 단계
      */
     private void prepareRace(){
-        //입력 받기
-        OutputView.printInputMessageOfNameOfCars();
-        List<String> nameofCars =  InputView.getNameofCars();
 
     }
 
