@@ -15,6 +15,8 @@ public class Application {
         OutputView.printInputMessageOfNameOfCars();
         List<String> nameofCars =  InputView.getNameofCars();
 
+        OutputView.printInputMessageOfTotalCount();
+
 
         Cars cars = new Cars(nameofCars);
 

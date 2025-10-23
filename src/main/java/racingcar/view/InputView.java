@@ -17,6 +17,7 @@ public class InputView {
     }
 
     public static void getCount(){
+        String input = getInput();
 
     }
 
