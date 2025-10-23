@@ -5,6 +5,8 @@ import racingcar.domain.RacingResult;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
+import java.util.List;
+
 public class RacingController {
     private Racing racing;
 
@@ -28,7 +30,7 @@ public class RacingController {
     private void prepareRace(){
         //입력 받기
         OutputView.printInputMessageOfNameOfCars();
-        InputView.getNameofCars();
+        List<String> nameofCars =  InputView.getNameofCars();
 
     }
 
