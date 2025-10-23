@@ -16,19 +16,9 @@ public class RacingController {
     }
 
     public void run(){
-        //경기 준비
-
         //경기 진행
 
         //경기 마무리
-
-    }
-
-    /**
-     * 경기 준비
-     * Racing을 위한 준비 단계
-     */
-    private void prepareRace(){
 
     }
 
