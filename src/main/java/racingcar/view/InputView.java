@@ -16,9 +16,9 @@ public class InputView {
         return nameofCars;
     }
 
-    public static void getCount(){
+    public static int getCount(){
         String input = getInput();
-
+        return inputisDigit(input);
     }
 
     public static String getInput(){
@@ -29,7 +29,12 @@ public class InputView {
             throw new IllegalArgumentException(ErrorMessage.INVALID_NULL_INPUT.getMessage());
         }
     }
-
+    public static int inputisDigit(String str){
+        if(! str.matches("\\d+")){
+            throw new IllegalArgumentException(ErrorMessage.INVALID_DIGIT_INPUT.getMessage());
+        }
+        return Integer.parseInt(str);
+    }
 
     public static String validateInput(String str){
         if (str==null || str.trim().isBlank()){

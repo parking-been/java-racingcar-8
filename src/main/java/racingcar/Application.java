@@ -2,7 +2,9 @@ package racingcar;
 
 import racingcar.controller.RacingController;
 import racingcar.domain.Cars;
+import racingcar.domain.Counter;
 import racingcar.domain.Racing;
+import racingcar.domain.RacingResult;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
@@ -16,9 +18,11 @@ public class Application {
         List<String> nameofCars =  InputView.getNameofCars();
 
         OutputView.printInputMessageOfTotalCount();
-
+        int totalCount = InputView.getCount();
 
         Cars cars = new Cars(nameofCars);
+        Counter counter = new Counter(totalCount);
+
 
         
         
