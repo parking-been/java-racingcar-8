@@ -1,0 +1,16 @@
+package racingcar.exception;
+
+public enum ErrorMessage {
+
+    INVALID_NULL_INPUT("[Error] 입력이 제대로 이루어지지 않았습니다.(빈칸이거나 null값을 가집니다)");
+
+    private final String message;
+
+    ErrorMessage(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+}
