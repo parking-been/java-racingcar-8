@@ -89,6 +89,18 @@ class RacingTest extends NsTest {
         },MOVING_FORWARD,STOP);
     }
 
+    void 경기_결과_출력하기(){
+        assertRandomNumberInRangeTest(()->{
+
+            racing.orderCarsToMove();
+            racing.orderCarsToMove();
+            racing.printFinalRaceResult();
+
+
+
+        },MOVING_FORWARD,STOP,MOVING_FORWARD,STOP);
+    }
+
     @Override
     protected void runMain() {
 

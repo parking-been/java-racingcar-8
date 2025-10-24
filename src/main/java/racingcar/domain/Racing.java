@@ -46,4 +46,21 @@ public class Racing {
         return true;
     }
 
+    /**
+     * 경기 결과 출력하기
+     */
+    public void printFinalRaceResult(){
+        List<String> result = getFinalRaceResult();
+
+    }
+
+
+    private List<String> getFinalRaceResult(){
+        List<String> nameOfCars = cars.getNameOfCars();
+        List<Integer> locationOfCars = cars.getDistanceOfCars();
+        List<Integer> winnerIndex = RacingResult.decideWinner(locationOfCars);
+        List<String> result = winnerIndex.stream().map(nameOfCars::get).toList();
+        return result;
+    }
+
 }

@@ -13,6 +13,7 @@ public class OutputView {
         System.out.println(INPUT_MESSAGE_OF_TOTAL_COUNT);
     }
 
+
     public static void printCurrentResultOfRacing(List<String> nameOfCars, List<Integer> locationOfCars, boolean isFirstCount){
         if (isFirstCount){
             System.out.println(OUTPUT_MESSAGE_OF_CURRENT_RESULT_OF_RACING);
