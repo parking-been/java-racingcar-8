@@ -32,15 +32,15 @@ public class Racing {
     public void printCarsLocation(){
         List<String> nameOfCars = cars.getNameOfCars();
         List<Integer> locationOfCars = cars.getDistanceOfCars();
-
-        OutputView.printCurrentResultOfRacing(nameOfCars, locationOfCars);
+        boolean isFirstCount = counter.isFirstCount();
+        OutputView.printCurrentResultOfRacing(nameOfCars, locationOfCars, isFirstCount);
     }
 
     /**
      * 경기를 계속 진행해야하는지 여부 판단
      */
     public boolean canProceedRace(){
-        if (counter.getTotalCount()<=0){
+        if (counter.getCurrentCount()<=0){
             return false;
         }
         return true;

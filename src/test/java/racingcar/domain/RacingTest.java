@@ -71,6 +71,24 @@ class RacingTest extends NsTest {
         },MOVING_FORWARD,STOP,MOVING_FORWARD,STOP);
     }
 
+    @Test
+    @DisplayName("자동차들의 현재 위치 출력_2")
+    void 현재_자동차들의_위치_출력_2(){
+
+        assertRandomNumberInRangeTest(()->{
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            System.setOut(new PrintStream(out));
+
+            racing.orderCarsToMove();
+            racing.printCarsLocation();
+
+            String result = out.toString().trim();
+
+            assertThat(result).containsSubsequence("실행 결과","pobi : -", "mini :");
+
+        },MOVING_FORWARD,STOP);
+    }
+
     @Override
     protected void runMain() {
 

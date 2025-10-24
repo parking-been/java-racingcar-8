@@ -27,11 +27,14 @@ public class RacingController {
      * 경기 진행
      */
     private void proceedRace(){
-//        while(){
-//
-//        }
 
-        //자동차 이동
+        while(racing.canProceedRace()){
+            //자동차 이동
+            racing.orderCarsToMove();
+
+            //자동차들의 위치 출력
+            racing.printCarsLocation();
+        }
 
     }
 
