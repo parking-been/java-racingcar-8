@@ -89,16 +89,22 @@ class RacingTest extends NsTest {
         },MOVING_FORWARD,STOP);
     }
 
+    @Test
     void 경기_결과_출력하기(){
         assertRandomNumberInRangeTest(()->{
+
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            System.setOut(new PrintStream(out));
 
             racing.orderCarsToMove();
             racing.orderCarsToMove();
             racing.printFinalRaceResult();
+            String result = out.toString().trim();
+
+            assertThat(result).containsSubsequence("최종 우승자 : pobi, mini");
 
 
-
-        },MOVING_FORWARD,STOP,MOVING_FORWARD,STOP);
+        },MOVING_FORWARD,STOP,STOP,MOVING_FORWARD);
     }
 
     @Override
