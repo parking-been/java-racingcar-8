@@ -51,7 +51,7 @@ public class Racing {
      */
     public void printFinalRaceResult(){
         List<String> result = getFinalRaceResult();
-
+        OutputView.printFinalResultOfRacing(result);
     }
 
 
