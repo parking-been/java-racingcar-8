@@ -27,6 +27,11 @@ public class RacingController {
      * 경기 진행
      */
     private void proceedRace(){
+//        while(){
+//
+//        }
+
+        //자동차 이동
 
     }
 

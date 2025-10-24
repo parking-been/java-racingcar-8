@@ -19,4 +19,12 @@ public class Cars {
             throw new IllegalArgumentException(ErrorMessage.DUPLICATED_NAME.getMessage());
         }
     }
+
+    public void moveCars(){
+        carInformation.stream().forEach(Car::move);
+    }
+
+
+
+
 }

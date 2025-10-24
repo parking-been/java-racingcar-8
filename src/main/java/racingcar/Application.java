@@ -13,8 +13,7 @@ import java.util.Random;
 
 public class Application {
     public static void main(String[] args) {
-        
-        //경기 준비
+
         OutputView.printInputMessageOfNameOfCars();
         List<String> nameofCars =  InputView.getNameofCars();
 
@@ -26,10 +25,7 @@ public class Application {
         RacingResult racingResult = new RacingResult();
         Racing racing = new Racing(cars, counter, racingResult);
         RacingController racingController = new RacingController(racing);
-        
-        
-        //RacingController racingController = new RacingController();
-        //racingController.run();
+        racingController.run();
 
     }
 }

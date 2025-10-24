@@ -5,6 +5,7 @@ import racingcar.exception.ErrorMessage;
 public class Car {
     private String name;
     private int drivingDistance;
+
     public Car(String name) {
         validateName(name);
         this.name = name;
@@ -15,8 +16,8 @@ public class Car {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getDrivingDistance() {
+        return drivingDistance;
     }
 
     private void validateName(String name){
@@ -24,6 +25,14 @@ public class Car {
             throw new IllegalArgumentException(ErrorMessage.INVALID_NAME_LENGTH.getMessage());
         }
     }
+
+    public void move(){
+        if (RandomMovePolicy.move()){
+            this.drivingDistance+=1;
+        }
+    }
+
+
 
 
 }

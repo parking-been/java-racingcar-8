@@ -16,4 +16,12 @@ public class Racing {
         this.racingResult = racingResult;
     }
 
+    public void orderCarsToMove(){
+        cars.moveCars();
+    }
+
+    private void orderCarsLocation(){
+
+    }
+
 }
