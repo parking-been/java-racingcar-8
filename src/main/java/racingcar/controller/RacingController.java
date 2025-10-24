@@ -17,7 +17,7 @@ public class RacingController {
 
     public void run(){
         //경기 진행
-
+        proceedRace();
         //경기 마무리
 
     }
