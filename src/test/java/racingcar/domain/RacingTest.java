@@ -1,16 +1,23 @@
 package racingcar.domain;
 
+import camp.nextstep.edu.missionutils.test.NsTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static camp.nextstep.edu.missionutils.test.Assertions.assertRandomNumberInRangeTest;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class RacingTest {
+class RacingTest extends NsTest {
+    private static final int MOVING_FORWARD = 4;
+    private static final int STOP = 3;
 
     Racing racing;
 
@@ -45,4 +52,27 @@ class RacingTest {
 
     }
 
+    @Test
+    @DisplayName("자동차들의 현재 위치 출력")
+    void 현재_자동차들의_위치_출력(){
+
+        assertRandomNumberInRangeTest(()->{
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            System.setOut(new PrintStream(out));
+
+            racing.orderCarsToMove();
+            racing.orderCarsToMove();
+            racing.printCarsLocation();
+
+            String result = out.toString().trim();
+
+            assertThat(result).containsSubsequence("pobi : --", "mini :");
+
+        },MOVING_FORWARD,STOP,MOVING_FORWARD,STOP);
+    }
+
+    @Override
+    protected void runMain() {
+
+    }
 }
