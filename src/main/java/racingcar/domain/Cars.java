@@ -24,6 +24,14 @@ public class Cars {
         carInformation.stream().forEach(Car::move);
     }
 
+    public List<String> getNameOfCars(){
+        return carInformation.stream().map(Car::getName).toList();
+    }
+
+    public List<Integer> getDistanceOfCars(){
+        return carInformation.stream().map(Car::getDrivingDistance).toList();
+    }
+
 
 
 

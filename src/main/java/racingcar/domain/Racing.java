@@ -26,10 +26,15 @@ public class Racing {
         counter.decreaseCount();
     }
 
-    private void orderCarsLocation(){
+    /**
+     * 현재 자동차들의 위치 출력
+     */
+    public void printCarsLocation(){
+        List<String> nameOfCars = cars.getNameOfCars();
+        List<Integer> locationOfCars = cars.getDistanceOfCars();
 
+        OutputView.printCurrentResultOfRacing(nameOfCars, locationOfCars);
     }
-
 
     /**
      * 경기를 계속 진행해야하는지 여부 판단
