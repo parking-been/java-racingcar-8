@@ -8,12 +8,10 @@ import java.util.List;
 public class Racing {
     private Cars cars;
     private Counter counter;
-    private RacingResult racingResult;
 
-    public Racing(Cars cars, Counter counter, RacingResult racingResult) {
+    public Racing(Cars cars, Counter counter) {
         this.cars = cars;
         this.counter = counter;
-        this.racingResult = racingResult;
     }
 
     /**

@@ -22,8 +22,7 @@ public class Application {
 
         Cars cars = new Cars(nameofCars);
         Counter counter = new Counter(totalCount);
-        RacingResult racingResult = new RacingResult();
-        Racing racing = new Racing(cars, counter, racingResult);
+        Racing racing = new Racing(cars, counter);
         RacingController racingController = new RacingController(racing);
         racingController.run();
 

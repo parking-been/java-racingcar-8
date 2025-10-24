@@ -25,8 +25,7 @@ class RacingTest extends NsTest {
     public void beforeEach(){
         Cars cars = new Cars(List.of("pobi","mini"));
         Counter counter = new Counter(3);
-        RacingResult racingResult = new RacingResult();
-        racing = new Racing(cars, counter, racingResult);
+        racing = new Racing(cars, counter);
     }
 
     @AfterEach

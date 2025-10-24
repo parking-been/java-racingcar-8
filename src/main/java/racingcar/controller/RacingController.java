@@ -19,6 +19,7 @@ public class RacingController {
         //경기 진행
         proceedRace();
         //경기 마무리
+        finishRace();
 
     }
 
@@ -42,6 +43,6 @@ public class RacingController {
      * 경기 마침
      */
     private void finishRace(){
-
+        racing.printFinalRaceResult();
     }
 }
