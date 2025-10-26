@@ -43,6 +43,7 @@ public class RacingController {
      * 경기 마침
      */
     private void finishRace(){
+        //우승자 출력
         racing.printFinalRaceResult();
     }
 }

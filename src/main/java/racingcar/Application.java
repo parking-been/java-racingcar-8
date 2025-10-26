@@ -22,10 +22,10 @@ public class Application {
             throw e;
         }
 
-
     }
 
     public static void runApplication(){
+
         OutputView.printInputMessageOfNameOfCars();
         List<String> nameofCars =  InputView.getNameofCars();
 
