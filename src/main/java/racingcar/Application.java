@@ -14,6 +14,18 @@ import java.util.Random;
 public class Application {
     public static void main(String[] args) {
 
+        try{
+            runApplication();
+        } catch (Throwable e){
+            // 예외처리 메세지 출력
+            System.out.println(e.getMessage());
+            throw e;
+        }
+
+
+    }
+
+    public static void runApplication(){
         OutputView.printInputMessageOfNameOfCars();
         List<String> nameofCars =  InputView.getNameofCars();
 
@@ -25,6 +37,5 @@ public class Application {
         Racing racing = new Racing(cars, counter);
         RacingController racingController = new RacingController(racing);
         racingController.run();
-
     }
 }

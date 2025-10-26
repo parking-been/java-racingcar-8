@@ -71,7 +71,7 @@ class RacingTest extends NsTest {
     }
 
     @Test
-    @DisplayName("자동차들의 현재 위치 출력_2")
+    @DisplayName("자동차들의 현재 위치 출력_예시2")
     void 현재_자동차들의_위치_출력_2(){
 
         assertRandomNumberInRangeTest(()->{
